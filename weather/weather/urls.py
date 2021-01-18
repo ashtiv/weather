@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from weatherapp.views import  get_name,add,naaam
+from weatherapp.views import  get_name,add,naaam,bnaaam
 from django.urls import re_path
 from django.views.static import serve
 from . import settings
@@ -26,6 +26,7 @@ urlpatterns = [
     path('weather/', get_name),
     path('know/', add),
     path('search/<str:x>/', naaam),
+    path('search//', bnaaam),   
 ]
 urlpatterns += [
   re_path(r'^static/(?:.*)$', serve, {'document_root': settings.STATIC_ROOT, })
