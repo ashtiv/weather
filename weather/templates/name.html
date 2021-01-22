@@ -1,0 +1,27 @@
+{% load static %}
+<body>
+<img id="bimg" src='{% static "w1.png" %}'>
+
+	
+
+<link rel="stylesheet" type="text/css" href='{% static "weth.css" %}'>
+
+
+<div id="div1">
+	<h1>Know the Weather</h1>
+<form id="fm" action="/know/"  method = "post">{% csrf_token %}
+    <input id ="in1" type="text" name="content" placeholder="Enter the city">
+    <br>
+    <input id ="in2" type="submit" value="Search"></form>
+<!-- <ul>
+    {% for i in all %} 
+    <li>{{i.content}} 
+    </li>
+    {% endfor %}
+</ul>-->
+<br>
+{% block body %}
+{% endblock %}
+ </div>
+</body>
+
