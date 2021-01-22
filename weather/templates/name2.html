@@ -1,0 +1,29 @@
+
+{% extends 'name.html' %}
+{% block body %}
+<div id="des5">
+    <span id="des5span" >
+    City "{{response}}" not found
+    </span>
+    </div>
+    <div id="res">
+    <div id="des">
+    <img id="desi" src={{response.weather.0.icon}}>
+    <div id="despp">{{response.weather.0.description}} <span style="color: yellow"> {{response.main.temp_min}}°C to {{response.main.temp_max}}°C </span>
+    </div>
+    </div>
+    <div id="des1">
+        <p1 id="desp">Pressure <br><br>{{response.main.pressure}} hpa</p1>
+    </div>
+    <div id="des2">
+        <p1 id="desp">Humidity <br><br>{{response.main.humidity}}%</p1>
+    </div>
+    <div id="des3">
+        <p1 id="desp">Visibility <br><br>{{response.visibility}}m</p1>
+    </div>
+    <div id="des4">
+        <p1 id="desp1">Avg. Temp  &nbsp &nbsp &nbsp &nbsp<span style="color: yellow">{{response.main.temp}}°C</span><br><br>Wind Speed  &nbsp &nbsp &nbsp{{response.wind.speed}}km/h<br><br>Wind Degree&nbsp &nbsp &nbsp{{response.wind.deg}}°</p1></div>
+</div>
+
+
+{% endblock %}
