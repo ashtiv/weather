@@ -9,6 +9,22 @@ import json
 from json import dumps
 import flag
 # Create your views here.
+def handler400(request,exception):
+    context={}
+    context['error']="Some error has occured"
+    return render(request,"error.html",context)
+def handler403(request,exception):
+    context={}
+    context['error']="Some error has occured"
+    return render(request,"error.html",context)
+def handler500(request):
+    context={}
+    context['error']="Some error has occured"
+    return render(request,"error.html",context)
+def handler404(request,exception):
+    context={}
+    context['error']="Some error has occured"
+    return render(request,"error.html",context)
 
 def get_name(request):
     global all_items
