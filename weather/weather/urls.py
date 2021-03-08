@@ -19,6 +19,10 @@ from weatherapp.views import  get_name,add,naaam,bnaaam
 from django.urls import re_path
 from django.views.static import serve
 from . import settings
+handler400 = 'weatherapp.views.handler400'
+handler403 = 'weatherapp.views.handler403'
+handler404 = 'weatherapp.views.handler404'
+handler500 = 'weatherapp.views.handler500'
 
 
 urlpatterns = [
